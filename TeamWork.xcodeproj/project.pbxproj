@@ -127,7 +127,7 @@
 		EA0EB7B82692D0B6006F75F8 /* TeamWork */ = {
 			isa = PBXGroup;
 			children = (
-				079371902692D76300C67084 /* Base */,
+				EAC15D7C2692EFD900E231E8 /* Presentation */,
 				0793718F2692D73000C67084 /* Infrastructure */,
 				EA0EB7B92692D0B6006F75F8 /* AppDelegate.swift */,
 				EA0EB7BB2692D0B6006F75F8 /* SceneDelegate.swift */,
@@ -138,6 +138,14 @@
 				EA0EB7C72692D0B7006F75F8 /* Info.plist */,
 			);
 			path = TeamWork;
+			sourceTree = "<group>";
+		};
+		EAC15D7C2692EFD900E231E8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				079371902692D76300C67084 /* Base */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
