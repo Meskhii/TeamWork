@@ -29,12 +29,11 @@ class SecondCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with item: ProfileViewModel) {
-        imgView.kf.setImage(with: "\(item.imageOrd)")
+    func configure(with item: FeedModel) {
+        imgView.kf.setImage(with: URL(string: item.imageUrl ?? ""))
         labelTime.text = item.time
         labelDescription.text = item.title
         labelAuthor.text = item.author
-        profileImage.kf.setImage(with: "\(item.imageProfile)")
     }
 
     @IBAction func alert(_ sender: Any) {

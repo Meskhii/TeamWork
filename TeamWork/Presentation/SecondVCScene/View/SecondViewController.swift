@@ -7,13 +7,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: PostViewModelProtocol!
     private var dataSource: PostDataSource!
-    private var profilesManager: ProfileManagerProtocol!
+    private var feedManager: FeedManagerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class SecondViewController: UIViewController {
     
     private func configureViewModel() {
         feedManager = FeedManager()
-        viewModel = PostViewModel(with: FeedManager)
+        viewModel = PostViewModel(with: feedManager)
         dataSource = PostDataSource(with: tableView, viewModel: viewModel)
         
     }

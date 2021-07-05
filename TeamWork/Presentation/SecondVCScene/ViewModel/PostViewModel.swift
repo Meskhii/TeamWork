@@ -10,7 +10,7 @@ import UIKit
 
 protocol PostViewModelProtocol: AnyObject {
     
-    func getCountriesList(completion: @escaping (([ProfileViewModel]) -> Void))
+    func getArticles(completion: @escaping((Result<[FeedModel], Error>) -> Void))
     var didFinishedLoading: (() -> Void)? { get set }
     var spinner: UIActivityIndicatorView? { get set }
     var navigationItem: UINavigationItem? { get set }
@@ -22,7 +22,8 @@ class PostViewModel: PostViewModelProtocol {
     
     // MARK: - Private properties
     
-    private var countriesManager: FeedManagerProtocol!
+    private var profilesManager: FeedManagerProtocol!
+    
     
     // MARK: - Outputs
     
@@ -37,15 +38,8 @@ class PostViewModel: PostViewModelProtocol {
         self.profilesManager = profilesManager
     }
     
-    func getCountriesList(completion: @escaping (([ProfileViewModel]) -> Void)) {
-        profilesManager.fetchFeedList { profiles in
-            DispatchQueue.main.async {
-                
-                let profileViewModels =  profiles.map { ProfileViewModel(profile: $0) }
-            
-                completion(profileViewModels)
-            }
-        }
+    func getArticles(completion: @escaping((Result<[FeedModel], Error>) -> Void)) {
+        profilesManager.fetchFeedList(completion: completion)
     }
     
     func setTitle(with text: String, on navigationItem: UINavigationItem) {

@@ -5,16 +5,14 @@
 //  Created by Ilia Tsikelashvili on 05.07.21.
 //
 
-import Foundation
 import UIKit
 
 class PostDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    
     private var tableView: UITableView!
     private var viewModel: PostViewModelProtocol!
     
-    private var postList = [ProfileViewModel]()
+    private var postList = [FeedModel]()
     
     init(with tableView: UITableView, viewModel: PostViewModelProtocol) {
         super.init()
@@ -27,19 +25,25 @@ class PostDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func refresh() {
-        viewModel.getCountriesList { countries in
-            self.postList.append(contentsOf: countries)
-            self.tableView.reloadData()
+        viewModel.getArticles { [weak self] result in
+            switch result {
+            case .success(let newsList):
+                self?.postList = newsList
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let err):
+                print(err)
+            }
         }
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(SecondCell.self, for: indexPath)
+        let cell = tableView.deque(class: SecondCell.self, for: indexPath)
         cell.viewController = SecondViewController.init()
         cell.configure(with: postList[indexPath.row])
         return cell
@@ -48,5 +52,5 @@ class PostDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
+    
 }
-
