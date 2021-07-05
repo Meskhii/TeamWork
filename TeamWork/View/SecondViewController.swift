@@ -11,10 +11,37 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var viewModel: PostViewModelProtocol!
+    private var dataSource: PostDataSource!
+    private var profilesManager: ProfileManagerProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupLayout()
+        configureViewModel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dataSource.refresh()
+    }
+    
+    private func setupLayout() {
+        tableView.registerNib(class: SecondCell.self)
+    }
+    
+    private func configureViewModel() {
+        profileManager = ProfileManager()
+        viewModel = PostViewModel(with: profileManager)
+        dataSource = PostDataSource(with: tableView, viewModel: viewModel)
+        
+    }
+    
+    private func bindings() {
+        viewModel.didFinishedLoading = {
+        }
+    }
+    
 
 
 }

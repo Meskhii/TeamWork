@@ -71,10 +71,16 @@
                                                         <constraint firstAttribute="width" constant="220" id="BYV-SY-Jqw"/>
                                                     </constraints>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-es-vkg">
-                                                    <rect key="frame" x="350" y="26" width="47" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-es-vkg">
+                                                    <rect key="frame" x="382" y="27" width="15" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="9F9-iy-h5Q"/>
+                                                        <constraint firstAttribute="width" constant="15" id="M40-Re-fuD"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="three_dots"/>
+                                                    <connections>
+                                                        <action selector="alert:" destination="Ieq-wf-KSJ" eventType="touchUpInside" id="mVs-fP-5Go"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -82,14 +88,23 @@
                                                 <constraint firstItem="gwR-P3-f2c" firstAttribute="leading" secondItem="5f4-tQ-s9A" secondAttribute="trailing" constant="8" symbolic="YES" id="JpY-rV-Gkc"/>
                                                 <constraint firstItem="gwR-P3-f2c" firstAttribute="top" secondItem="b5r-HL-gBE" secondAttribute="topMargin" constant="14" id="Qyc-pb-dpu"/>
                                                 <constraint firstItem="5f4-tQ-s9A" firstAttribute="leading" secondItem="b5r-HL-gBE" secondAttribute="leading" constant="16" id="U8S-1Y-339"/>
+                                                <constraint firstAttribute="trailing" secondItem="KJb-es-vkg" secondAttribute="trailing" constant="17" id="Ui2-eP-eAK"/>
                                                 <constraint firstItem="0JS-rr-9yU" firstAttribute="top" secondItem="3ox-2m-ZeY" secondAttribute="bottom" constant="8" symbolic="YES" id="WlF-i1-xEK"/>
                                                 <constraint firstItem="3ox-2m-ZeY" firstAttribute="top" secondItem="gwR-P3-f2c" secondAttribute="bottom" constant="8" symbolic="YES" id="aN4-rJ-fVf"/>
+                                                <constraint firstItem="KJb-es-vkg" firstAttribute="top" secondItem="b5r-HL-gBE" secondAttribute="top" constant="27" id="eUv-ij-ict"/>
                                                 <constraint firstItem="3ox-2m-ZeY" firstAttribute="leading" secondItem="b5r-HL-gBE" secondAttribute="leading" constant="16" id="gnp-0S-3Cp"/>
                                                 <constraint firstAttribute="trailing" secondItem="3ox-2m-ZeY" secondAttribute="trailing" constant="17" id="hSc-cO-qVr"/>
                                                 <constraint firstItem="0JS-rr-9yU" firstAttribute="leading" secondItem="b5r-HL-gBE" secondAttribute="leading" constant="16" id="srm-S3-KrS"/>
                                                 <constraint firstAttribute="trailing" secondItem="0JS-rr-9yU" secondAttribute="trailing" constant="17" id="vtj-Oo-f95"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="0JS-rr-9yU" id="UHX-r3-41n"/>
+                                            <outlet property="labelAuthor" destination="SeC-yD-TsP" id="1Vq-Lu-lKA"/>
+                                            <outlet property="labelDescription" destination="3ox-2m-ZeY" id="7po-xi-RlK"/>
+                                            <outlet property="labelTime" destination="j4E-kQ-W46" id="hAi-L7-iRF"/>
+                                            <outlet property="profileImage" destination="5f4-tQ-s9A" id="DQf-id-DeC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -132,6 +147,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="three_dots" width="12" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
