@@ -12,6 +12,7 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
     private var collectionView: UICollectionView!
     private var viewModel: InfoViewModelProtocol!
     private var infoViewModel = [InfoViewModel]()
+    private var pageControl : UIPageControl!
     
     init(with collectionView: UICollectionView, viewModel: InfoViewModelProtocol) {
         super.init()
@@ -51,7 +52,7 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
                }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let count = newsArray.count
+        let count = infoViewModel.count
 
             pageControl.numberOfPages = count
             pageControl.isHidden = !(count > 1)
@@ -73,10 +74,11 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return  1.2
+        return  0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
         
     }
+}
