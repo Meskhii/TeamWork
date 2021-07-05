@@ -18,9 +18,37 @@
 		0793719A2692D94200C67084 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079371992692D94200C67084 /* FeedManager.swift */; };
 		0793719C2692D98200C67084 /* FeedArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793719B2692D98200C67084 /* FeedArticles.swift */; };
 		0793719E2692D9C500C67084 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793719D2692D9C500C67084 /* FeedModel.swift */; };
-		EA0617FF269340A20090E38C /* FirstViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0617FE269340A20090E38C /* FirstViewController.storyboard */; };
+		07D132AB269399EB00488CBA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759C269387B1002FCC7A /* SecondViewController.swift */; };
+		07D132AC26939A9000488CBA /* SecondViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA6B759C269387B1002FCC7A /* SecondViewController.swift */; };
+		07D132AD26939A9000488CBA /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6B759A269387AA002FCC7A /* SecondViewController.storyboard */; };
+		07D132AE26939A9000488CBA /* ThirdViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
+		07D132AF26939A9000488CBA /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
+		07D132B026939AA200488CBA /* FirstViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA061800269340AA0090E38C /* FirstViewController.swift */; };
+		07D132B126939AA200488CBA /* FirstViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0617FE269340A20090E38C /* FirstViewController.storyboard */; };
+		07D132B326939AE900488CBA /* PostDataSource.swift in Resources */ = {isa = PBXBuildFile; fileRef = EAB3168026938A4300D63D88 /* PostDataSource.swift */; };
+		07D132B426939AE900488CBA /* PostViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = EAB3167C26938A3900D63D88 /* PostViewModel.swift */; };
+		07D132B526939AE900488CBA /* SecondCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA6B759F269387DA002FCC7A /* SecondCell.swift */; };
+		07D132B626939AE900488CBA /* InfoViewModelProtocol.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA06180E269341030090E38C /* InfoViewModelProtocol.swift */; };
+		07D132B726939AE900488CBA /* InfoViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA06180C269340FF0090E38C /* InfoViewModel.swift */; };
+		07D132B826939AF500488CBA /* InfoDataSource.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA06180A269340FC0090E38C /* InfoDataSource.swift */; };
+		07D132B926939AF500488CBA /* Info.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA061808269340F70090E38C /* Info.swift */; };
+		07D132BA26939AF500488CBA /* InfoCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA061805269340D50090E38C /* InfoCell.swift */; };
+		07D132BB26939AF500488CBA /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA061803269340D00090E38C /* InfoCell.xib */; };
+		07D132BC26939AFA00488CBA /* BaseViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371912692D77400C67084 /* BaseViewController.swift */; };
+		07D132BD26939AFA00488CBA /* CollectionViewExtension.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA061811269341150090E38C /* CollectionViewExtension.swift */; };
+		07D132BE26939AFA00488CBA /* UITableView+Extension.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */; };
+		07D132BF26939AFF00488CBA /* UITableViewCell+Extension.swift in Resources */ = {isa = PBXBuildFile; fileRef = EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */; };
+		07D132C026939AFF00488CBA /* WelcomeModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371972692D89F00C67084 /* WelcomeModel.swift */; };
+		07D132C126939AFF00488CBA /* FeedArticles.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0793719B2692D98200C67084 /* FeedArticles.swift */; };
+		07D132C226939B0E00488CBA /* FeedModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0793719D2692D9C500C67084 /* FeedModel.swift */; };
+		07D132C326939B0E00488CBA /* NetworkManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371932692D7E200C67084 /* NetworkManager.swift */; };
+		07D132C426939B0E00488CBA /* WelcomeManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371952692D85800C67084 /* WelcomeManager.swift */; };
+		07D132C526939B1500488CBA /* FeedManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371992692D94200C67084 /* FeedManager.swift */; };
+		07D132C626939B1500488CBA /* CoordinatorDelegate.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371872692D68200C67084 /* CoordinatorDelegate.swift */; };
+		07D132C726939B1500488CBA /* CoordinatorProtocol.swift in Resources */ = {isa = PBXBuildFile; fileRef = 079371892692D69800C67084 /* CoordinatorProtocol.swift */; };
+		07D132C826939B1900488CBA /* AppCoordinator.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0793718B2692D6C600C67084 /* AppCoordinator.swift */; };
+		07D132C926939B1900488CBA /* Storyboarded.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0793718D2692D6E900C67084 /* Storyboarded.swift */; };
 		EA061801269340AA0090E38C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA061800269340AA0090E38C /* FirstViewController.swift */; };
-		EA061804269340D00090E38C /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA061803269340D00090E38C /* InfoCell.xib */; };
 		EA061806269340D50090E38C /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA061805269340D50090E38C /* InfoCell.swift */; };
 		EA061809269340F70090E38C /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA061808269340F70090E38C /* Info.swift */; };
 		EA06180B269340FC0090E38C /* InfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06180A269340FC0090E38C /* InfoDataSource.swift */; };
@@ -29,19 +57,13 @@
 		EA061812269341150090E38C /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA061811269341150090E38C /* CollectionViewExtension.swift */; };
 		EA0EB7BA2692D0B6006F75F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0EB7B92692D0B6006F75F8 /* AppDelegate.swift */; };
 		EA0EB7BC2692D0B6006F75F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0EB7BB2692D0B6006F75F8 /* SceneDelegate.swift */; };
-		EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7BF2692D0B6006F75F8 /* Main.storyboard */; };
 		EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C22692D0B7006F75F8 /* Assets.xcassets */; };
-		EA0EB7C62692D0B7006F75F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C42692D0B7006F75F8 /* LaunchScreen.storyboard */; };
-		EA584F6E2693640D008CC34F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C72692D0B7006F75F8 /* Info.plist */; };
-		EA6B759B269387AA002FCC7A /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6B759A269387AA002FCC7A /* SecondViewController.storyboard */; };
-		EA6B759D269387B1002FCC7A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759C269387B1002FCC7A /* SecondViewController.swift */; };
 		EA6B75A0269387DA002FCC7A /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759F269387DA002FCC7A /* SecondCell.swift */; };
 		EA6B75A42693887F002FCC7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */; };
 		EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */; };
 		EAB3167D26938A3900D63D88 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3167C26938A3900D63D88 /* PostViewModel.swift */; };
 		EAB3168126938A4300D63D88 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3168026938A4300D63D88 /* PostDataSource.swift */; };
 		EAB31684269392F700D63D88 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EAB31683269392F700D63D88 /* Kingfisher */; };
-		EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
 		EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -353,14 +375,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0617FF269340A20090E38C /* FirstViewController.storyboard in Resources */,
-				EA6B759B269387AA002FCC7A /* SecondViewController.storyboard in Resources */,
-				EA061804269340D00090E38C /* InfoCell.xib in Resources */,
-				EA0EB7C62692D0B7006F75F8 /* LaunchScreen.storyboard in Resources */,
-				EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */,
+				07D132C826939B1900488CBA /* AppCoordinator.swift in Resources */,
+				07D132C926939B1900488CBA /* Storyboarded.swift in Resources */,
+				07D132C526939B1500488CBA /* FeedManager.swift in Resources */,
+				07D132C626939B1500488CBA /* CoordinatorDelegate.swift in Resources */,
+				07D132C726939B1500488CBA /* CoordinatorProtocol.swift in Resources */,
+				07D132C226939B0E00488CBA /* FeedModel.swift in Resources */,
+				07D132C326939B0E00488CBA /* NetworkManager.swift in Resources */,
+				07D132C426939B0E00488CBA /* WelcomeManager.swift in Resources */,
+				07D132BF26939AFF00488CBA /* UITableViewCell+Extension.swift in Resources */,
+				07D132C026939AFF00488CBA /* WelcomeModel.swift in Resources */,
+				07D132C126939AFF00488CBA /* FeedArticles.swift in Resources */,
+				07D132BC26939AFA00488CBA /* BaseViewController.swift in Resources */,
+				07D132BD26939AFA00488CBA /* CollectionViewExtension.swift in Resources */,
+				07D132BE26939AFA00488CBA /* UITableView+Extension.swift in Resources */,
+				07D132B826939AF500488CBA /* InfoDataSource.swift in Resources */,
+				07D132B926939AF500488CBA /* Info.swift in Resources */,
+				07D132BA26939AF500488CBA /* InfoCell.swift in Resources */,
+				07D132BB26939AF500488CBA /* InfoCell.xib in Resources */,
+				07D132B326939AE900488CBA /* PostDataSource.swift in Resources */,
+				07D132B426939AE900488CBA /* PostViewModel.swift in Resources */,
+				07D132B526939AE900488CBA /* SecondCell.swift in Resources */,
+				07D132B626939AE900488CBA /* InfoViewModelProtocol.swift in Resources */,
+				07D132B726939AE900488CBA /* InfoViewModel.swift in Resources */,
+				07D132B026939AA200488CBA /* FirstViewController.swift in Resources */,
+				07D132B126939AA200488CBA /* FirstViewController.storyboard in Resources */,
+				07D132AC26939A9000488CBA /* SecondViewController.swift in Resources */,
+				07D132AD26939A9000488CBA /* SecondViewController.storyboard in Resources */,
+				07D132AE26939A9000488CBA /* ThirdViewController.swift in Resources */,
+				07D132AF26939A9000488CBA /* ThirdViewController.storyboard in Resources */,
 				EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */,
-				EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */,
-				EA584F6E2693640D008CC34F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB3167D26938A3900D63D88 /* PostViewModel.swift in Sources */,
-				EA6B759D269387B1002FCC7A /* SecondViewController.swift in Sources */,
 				EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */,
 				079371942692D7E200C67084 /* NetworkManager.swift in Sources */,
 				EA061809269340F70090E38C /* Info.swift in Sources */,
@@ -393,6 +436,7 @@
 				0793719E2692D9C500C67084 /* FeedModel.swift in Sources */,
 				EA06180F269341030090E38C /* InfoViewModelProtocol.swift in Sources */,
 				079371882692D68200C67084 /* CoordinatorDelegate.swift in Sources */,
+				07D132AB269399EB00488CBA /* SecondViewController.swift in Sources */,
 				EA06180D269340FF0090E38C /* InfoViewModel.swift in Sources */,
 				0793718E2692D6E900C67084 /* Storyboarded.swift in Sources */,
 				EA061801269340AA0090E38C /* FirstViewController.swift in Sources */,

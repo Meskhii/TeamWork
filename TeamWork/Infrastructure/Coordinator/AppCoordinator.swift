@@ -21,17 +21,21 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        if UserDefaults.standard.bool(forKey: "skipped"){
-            let vc = FirstViewController.instantiateFromStoryboard()
-            vc.coordinator = self
-            navigationController?.pushViewController(vc, animated: true)
-            window?.rootViewController = navigationController
-        } else {
-            let vc = ThirdViewController.instantiateFromStoryboard()
-            vc.coordinator = self
-            navigationController?.pushViewController(vc, animated: true)
-            window?.rootViewController = navigationController
-        }
+        let vc = FirstViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
+        window?.rootViewController = navigationController
+//        if UserDefaults.standard.bool(forKey: "skipped"){
+//            let vc = FirstViewController.instantiateFromStoryboard()
+//            vc.coordinator = self
+//            navigationController?.pushViewController(vc, animated: true)
+//            window?.rootViewController = navigationController
+//        } else {
+//            let vc = SecondViewController.instantiateFromStoryboard()
+//            vc.coordinator = self
+//            navigationController?.pushViewController(vc, animated: true)
+//            window?.rootViewController = navigationController
+//        }
         window?.makeKeyAndVisible()
     }
     

@@ -12,9 +12,9 @@ class FirstViewController: BaseViewController {
     @IBOutlet weak var skipBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var viewModel: InfoViewModelProtocol?
-    private var dataSource: InfoDataSource?
-    private var apiManager: WelcomeManagerProtocol?
+    private var viewModel: InfoViewModelProtocol!
+    private var dataSource: InfoDataSource!
+    private var apiManager: WelcomeManagerProtocol!
     var info = [InfoViewModel]()
     
     var skipPressed = false
@@ -33,17 +33,15 @@ class FirstViewController: BaseViewController {
         apiManager = WelcomeManager()
         viewModel = InfosViewModel(with: apiManager!, navigationController: self.navigationController, pageControl: self.pageControl)
         dataSource = InfoDataSource(with: collectionView,
-                                    viewModel: viewModel as! InfoViewModelProtocol)
+                                    viewModel: viewModel, pageControl: pageControl)
         
-        dataSource!.refresh()
+        dataSource.refresh()
     }
     
     @IBAction func skip(_ sender: Any) {
-        skipPressed = true
-        skipPressed = UserDefaults.standard.bool(forKey: "skipped")
+        //skipPressed = true
+        //skipPressed = UserDefaults.standard.bool(forKey: "skipped")
         coordinator?.proceedToSecondVC()
-       
-        
     }
     
     

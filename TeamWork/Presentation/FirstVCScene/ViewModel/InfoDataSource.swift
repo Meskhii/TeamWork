@@ -12,9 +12,9 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
     private var collectionView: UICollectionView!
     private var viewModel: InfoViewModelProtocol!
     private var infoViewModel = [InfoViewModel]()
-    private var pageControl : UIPageControl!
+    private var pageControl: UIPageControl!
     
-    init(with collectionView: UICollectionView, viewModel: InfoViewModelProtocol) {
+    init(with collectionView: UICollectionView, viewModel: InfoViewModelProtocol, pageControl: UIPageControl) {
         super.init()
         
         self.collectionView = collectionView
@@ -22,6 +22,8 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
         self.collectionView.delegate = self
         
         self.viewModel = viewModel
+        self.pageControl = pageControl
+        refresh()
     }
     
     func refresh() {
@@ -37,7 +39,9 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.deque(InfoCell.self, for: indexPath)
+        
         cell.configure(with: infoViewModel[indexPath.row])
+        
         return cell
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {

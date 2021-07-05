@@ -8,18 +8,12 @@
 import Foundation
 
 struct Info: Codable {
-    var imageUrl: String!
-    var text: String!
+    var imageUrl: String?
+    var text: String?
 
+    enum CodingKeys: String, CodingKey {
+        case text = "text"
+        case imageUrl = "image_url"
+    }
     
-enum CodingKeys: String, CodingKey {
-    case text
-    case imageUrl = "image_url"
-  
-}
-}
-
-
-struct Infos: Codable {
-    var infos : [Info]
 }

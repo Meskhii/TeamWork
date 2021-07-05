@@ -16,10 +16,10 @@ protocol WelcomeManagerProtocol: AnyObject {
 class WelcomeManager: WelcomeManagerProtocol {
     func fetchInfo(completion: @escaping ((Result<[Info], Error>) -> Void)) {
         let url = "https://run.mocky.io/v3/3c597760-1ebc-4136-a10f-d285c3343efb"
-        NetworkManager.shared.get(url: url) { (result: Result<Infos, Error>) in
+        NetworkManager.shared.get(url: url) { (result: Result<[Info], Error>) in
             switch result {
             case .success(let response):
-                completion(.success(response.infos))
+                completion(.success(response))
             case .failure(let err):
                 completion(.failure(err))
             }

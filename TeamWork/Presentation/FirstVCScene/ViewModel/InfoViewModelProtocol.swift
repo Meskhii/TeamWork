@@ -9,6 +9,7 @@ import UIKit
 
 
 protocol InfoViewModelProtocol: AnyObject {
+    
     func fetchInfo(completion: @escaping (([InfoViewModel]) -> Void))
    func proceedToDetails(using infoViewModel: InfoViewModel)
     
@@ -26,7 +27,6 @@ final class InfosViewModel: InfoViewModelProtocol {
         self.navigationController = navigationController
         self.pageControl = pageControl
     }
-    
     
     func fetchInfo(completion: @escaping (([InfoViewModel]) -> Void)) {
         apiManager.fetchInfo { result in
