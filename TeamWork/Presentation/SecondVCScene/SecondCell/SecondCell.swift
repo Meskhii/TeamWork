@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SecondCell: UITableViewCell {
     @IBOutlet weak var labelAuthor      : UILabel!

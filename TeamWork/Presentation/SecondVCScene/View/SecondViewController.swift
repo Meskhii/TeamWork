@@ -27,7 +27,7 @@ class SecondViewController: BaseViewController {
     }
     
     private func setupLayout() {
-        tableView.registerNib(class: SecondCell.self)
+//        tableView.registerNib(class: SecondCell.self)
     }
     
     private func configureViewModel() {

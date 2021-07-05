@@ -14,6 +14,7 @@ protocol CoordinatorProtocol: AnyObject {
     func start()
     func popViewController()
     func proceedToSecondVC()
+    func proceedToSecondVCwithNext() 
     func proceedToThirdVC(with feed: FeedModel, coordinator: CoordinatorProtocol)
     func showAlert(message: String)
 }

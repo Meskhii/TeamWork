@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="300" id="Ieq-wf-KSJ" customClass="SecondCell" customModule="TeamWork" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondCell" rowHeight="300" id="Ieq-wf-KSJ" customClass="SecondCell" customModule="TeamWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ieq-wf-KSJ" id="b5r-HL-gBE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -88,6 +88,7 @@
                                                 <constraint firstItem="5f4-tQ-s9A" firstAttribute="top" secondItem="b5r-HL-gBE" secondAttribute="top" constant="25" id="65v-AF-Vks"/>
                                                 <constraint firstItem="gwR-P3-f2c" firstAttribute="leading" secondItem="5f4-tQ-s9A" secondAttribute="trailing" constant="8" symbolic="YES" id="JpY-rV-Gkc"/>
                                                 <constraint firstItem="gwR-P3-f2c" firstAttribute="top" secondItem="b5r-HL-gBE" secondAttribute="topMargin" constant="14" id="Qyc-pb-dpu"/>
+                                                <constraint firstAttribute="bottom" secondItem="0JS-rr-9yU" secondAttribute="bottom" constant="11" id="RYs-gy-rlR"/>
                                                 <constraint firstItem="5f4-tQ-s9A" firstAttribute="leading" secondItem="b5r-HL-gBE" secondAttribute="leading" constant="16" id="U8S-1Y-339"/>
                                                 <constraint firstAttribute="trailing" secondItem="KJb-es-vkg" secondAttribute="trailing" constant="17" id="Ui2-eP-eAK"/>
                                                 <constraint firstItem="0JS-rr-9yU" firstAttribute="top" secondItem="3ox-2m-ZeY" secondAttribute="bottom" constant="8" symbolic="YES" id="WlF-i1-xEK"/>

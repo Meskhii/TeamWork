@@ -25,17 +25,17 @@ final class AppCoordinator: CoordinatorProtocol {
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
         window?.rootViewController = navigationController
-//        if UserDefaults.standard.bool(forKey: "skipped"){
-//            let vc = FirstViewController.instantiateFromStoryboard()
-//            vc.coordinator = self
-//            navigationController?.pushViewController(vc, animated: true)
-//            window?.rootViewController = navigationController
-//        } else {
-//            let vc = SecondViewController.instantiateFromStoryboard()
-//            vc.coordinator = self
-//            navigationController?.pushViewController(vc, animated: true)
-//            window?.rootViewController = navigationController
-//        }
+        if UserDefaults.standard.bool(forKey: "skipped"){
+            let vc = SecondViewController.instantiateFromStoryboard()
+            vc.coordinator = self
+            navigationController?.pushViewController(vc, animated: true)
+            window?.rootViewController = navigationController
+        } else {
+            let vc = FirstViewController.instantiateFromStoryboard()
+            vc.coordinator = self
+            navigationController?.pushViewController(vc, animated: true)
+            window?.rootViewController = navigationController
+        }
         window?.makeKeyAndVisible()
     }
     
@@ -45,6 +45,13 @@ final class AppCoordinator: CoordinatorProtocol {
     
     func proceedToSecondVC() {
         UserDefaults.standard.setValue(true, forKey:"skipped")
+        let vc = SecondViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        UIApplication.shared.windows.first?.rootViewController = vc
+        //navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func proceedToSecondVCwithNext() {
         let vc = SecondViewController.instantiateFromStoryboard()
         vc.coordinator = self
         UIApplication.shared.windows.first?.rootViewController = vc

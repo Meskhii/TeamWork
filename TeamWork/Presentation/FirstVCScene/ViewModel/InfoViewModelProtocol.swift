@@ -11,7 +11,6 @@ import UIKit
 protocol InfoViewModelProtocol: AnyObject {
     
     func fetchInfo(completion: @escaping (([InfoViewModel]) -> Void))
-   func proceedToDetails(using infoViewModel: InfoViewModel)
     
     init(with apiManager: WelcomeManagerProtocol, navigationController: UINavigationController?, pageControl: UIPageControl)
 }
@@ -41,10 +40,4 @@ final class InfosViewModel: InfoViewModelProtocol {
         }
     }
     
-    func proceedToDetails(using infoViewModel: InfoViewModel) {
-        let sb = UIStoryboard(name: "SecondViewController", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }
