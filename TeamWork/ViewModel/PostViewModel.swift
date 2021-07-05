@@ -15,14 +15,14 @@ protocol PostViewModelProtocol: AnyObject {
     var spinner: UIActivityIndicatorView? { get set }
     var navigationItem: UINavigationItem? { get set }
     
-    init(with profilesManager: ProfileManagerProtocol)
+    init(with profilesManager: FeedManagerProtocol)
 }
 
 class PostViewModel: PostViewModelProtocol {
     
     // MARK: - Private properties
     
-    private var countriesManager: ProfileManagerProtocol!
+    private var countriesManager: FeedManagerProtocol!
     
     // MARK: - Outputs
     
@@ -33,12 +33,12 @@ class PostViewModel: PostViewModelProtocol {
     var spinner: UIActivityIndicatorView?
     var navigationItem: UINavigationItem?
     
-    required init(with profilesManager: ProfileManagerProtocol)  {
+    required init(with profilesManager: FeedManagerProtocol)  {
         self.profilesManager = profilesManager
     }
     
     func getCountriesList(completion: @escaping (([ProfileViewModel]) -> Void)) {
-        profilesManager.fetchProfiles { profiles in
+        profilesManager.fetchFeedList { profiles in
             DispatchQueue.main.async {
                 
                 let profileViewModels =  profiles.map { ProfileViewModel(profile: $0) }

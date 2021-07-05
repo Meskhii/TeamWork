@@ -30,11 +30,11 @@ class SecondCell: UITableViewCell {
     }
     
     func configure(with item: ProfileViewModel) {
-// imageView with kingfisher
-//        labelTime.text = item.
-//        labelDescription.text = item.
-//        labelDescription.text = item.
-//author image
+        imgView.kf.setImage(with: "\(item.imageOrd)")
+        labelTime.text = item.time
+        labelDescription.text = item.title
+        labelAuthor.text = item.author
+        profileImage.kf.setImage(with: "\(item.imageProfile)")
     }
 
     @IBAction func alert(_ sender: Any) {

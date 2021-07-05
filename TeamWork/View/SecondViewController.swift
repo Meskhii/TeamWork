@@ -31,8 +31,8 @@ class SecondViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        profileManager = ProfileManager()
-        viewModel = PostViewModel(with: profileManager)
+        feedManager = FeedManager()
+        viewModel = PostViewModel(with: FeedManager)
         dataSource = PostDataSource(with: tableView, viewModel: viewModel)
         
     }

@@ -9,14 +9,27 @@ import Foundation
 
 struct ProfileViewModel {
     
-    private var profile: FeedArticles
+    private var profile: FeedModel
     
-    init(profile: FeedArticles) {
+    init(profile: FeedModel) {
         self.profile = profile
     }
     
     var author: String {
         profile.author ?? ""
+    }
+    
+    var title: String {
+        profile.title ?? ""
+    }
+    var time: String {
+        profile.time ?? ""
+    }
+    var imageOrd: String {
+        profile.imageUrl ?? ""
+    }
+    var imageProfile: String {
+        profile.imageUrl ?? ""
     }
 
 }
