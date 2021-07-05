@@ -36,6 +36,8 @@
 		EA6B759B269387AA002FCC7A /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6B759A269387AA002FCC7A /* SecondViewController.storyboard */; };
 		EA6B759D269387B1002FCC7A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759C269387B1002FCC7A /* SecondViewController.swift */; };
 		EA6B75A0269387DA002FCC7A /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759F269387DA002FCC7A /* SecondCell.swift */; };
+		EA6B75A42693887F002FCC7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */; };
+		EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */; };
 		EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
 		EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		EA6B759A269387AA002FCC7A /* SecondViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
 		EA6B759C269387B1002FCC7A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EA6B759F269387DA002FCC7A /* SecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
+		EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
 		EAD42E3726936399006A25A6 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				EA061811269341150090E38C /* CollectionViewExtension.swift */,
+				EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */,
+				EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6B759D269387B1002FCC7A /* SecondViewController.swift in Sources */,
+				EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */,
 				079371942692D7E200C67084 /* NetworkManager.swift in Sources */,
 				EA061809269340F70090E38C /* Info.swift in Sources */,
 				0793718C2692D6C600C67084 /* AppCoordinator.swift in Sources */,
@@ -370,6 +377,7 @@
 				0793718E2692D6E900C67084 /* Storyboarded.swift in Sources */,
 				EA061801269340AA0090E38C /* FirstViewController.swift in Sources */,
 				EA061806269340D50090E38C /* InfoCell.swift in Sources */,
+				EA6B75A42693887F002FCC7A /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
