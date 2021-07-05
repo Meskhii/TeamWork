@@ -7,24 +7,34 @@
 
 import UIKit
 
-class FirstViewController: BaseViewController {
+class FirstViewController: BaseViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var skipBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     private var viewModel: InfoViewModelProtocol!
     private var dataSource: InfoDataSource!
     private var apiManager: WelcomeManagerProtocol!
-    var info = [InfoViewModel]()
-    
+    var i: Int = 0
     var skipPressed = false
+    var isLoading: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        skipBtn.layer.cornerRadius = 15
+        skipBtn.layer.cornerRadius = 8
+        nextBtn.layer.cornerRadius = 2
         collectionView.registerNib(class: InfoCell.self)
         configureViewModel()
+        self.navigationController?.navigationBar.isHidden = true
+        
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     
@@ -39,19 +49,27 @@ class FirstViewController: BaseViewController {
     }
     
     @IBAction func skip(_ sender: Any) {
-        //skipPressed = true
-        //skipPressed = UserDefaults.standard.bool(forKey: "skipped")
         coordinator?.proceedToSecondVC()
     }
     
+    func moveCollectionToFrame(contentOffset : CGFloat) {
+        
+        let frame: CGRect = CGRect(x : contentOffset ,y : self.collectionView.contentOffset.y ,width : self.collectionView.frame.width,height : self.collectionView.frame.height)
+        self.collectionView.scrollRectToVisible(frame, animated: true)
+    }
     
     @IBAction func next(_ sender: Any) {
-        let visibleItems: NSArray = self.collectionView.indexPathsForVisibleItems as NSArray
-           let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
-           let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)
-        if nextItem.row < info.count {
-               self.collectionView.scrollToItem(at: nextItem, at: .left, animated: true)
-    }
+        
+        if i < InfoDataSource.itemsCount - 1 {
+            i += 1
+            let collectionBounds = self.collectionView.bounds
+            let contentOffset = CGFloat(floor(self.collectionView.contentOffset.x + collectionBounds.size.width))
+            self.moveCollectionToFrame(contentOffset: contentOffset)
+            
+        } else {
+            coordinator?.proceedToSecondVCwithNext()
+        }
+        
     }
 }
 

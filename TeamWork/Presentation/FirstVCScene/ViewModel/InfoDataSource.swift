@@ -7,13 +7,14 @@
 
 import UIKit
 
-class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate  {
+class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     private var collectionView: UICollectionView!
     private var viewModel: InfoViewModelProtocol!
     private var infoViewModel = [InfoViewModel]()
     private var pageControl: UIPageControl!
-    
+    static var itemsCount: Int!
+
     init(with collectionView: UICollectionView, viewModel: InfoViewModelProtocol, pageControl: UIPageControl) {
         super.init()
         
@@ -23,7 +24,7 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
         
         self.viewModel = viewModel
         self.pageControl = pageControl
-        refresh()
+
     }
     
     func refresh() {
@@ -32,6 +33,7 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                InfoDataSource.itemsCount = self.infoViewModel.count
             }
         }
     }
@@ -49,20 +51,20 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-                   let witdh = scrollView.frame.width - (scrollView.contentInset.left*2)
-                   let index = scrollView.contentOffset.x / witdh
-                   let roundedIndex = round(index)
-                   self.pageControl?.currentPage = Int(roundedIndex)
-               }
+        let witdh = scrollView.frame.width - (scrollView.contentInset.left*2)
+        let index = scrollView.contentOffset.x / witdh
+        let roundedIndex = round(index)
+        self.pageControl?.currentPage = Int(roundedIndex)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let count = infoViewModel.count
-
-            pageControl.numberOfPages = count
-            pageControl.isHidden = !(count > 1)
-
-            return count
-        }
+        
+        pageControl.numberOfPages = count
+        pageControl.isHidden = !(count > 1)
+        
+        return count
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -70,12 +72,15 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
         let height = collectionView.frame.height
         
         return CGSize(width: width, height: height)
+        
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return  0
@@ -85,4 +90,6 @@ class InfoDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDele
         return 0
         
     }
+    
 }
+
