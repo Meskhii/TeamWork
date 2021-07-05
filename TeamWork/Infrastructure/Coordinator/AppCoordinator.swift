@@ -47,7 +47,7 @@ final class AppCoordinator: CoordinatorProtocol {
         //navigationController?.pushViewController(vc, animated: true)
     }
     
-    func proceedToThirdVC(with feedModel: String, coordinator: CoordinatorProtocol) {
+    func proceedToThirdVC(with feedModel: FeedModel, coordinator: CoordinatorProtocol) {
         let vc = ThirdViewController.instantiateFromStoryboard()
         vc.feedModel = feedModel
         vc.coordinator = coordinator
