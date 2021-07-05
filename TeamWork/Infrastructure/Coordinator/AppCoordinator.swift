@@ -21,7 +21,7 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        if UserDefaults.standard.bool(forKey: "is_logged_in"){
+        if UserDefaults.standard.bool(forKey: "skipped"){
             let vc = FirstViewController.instantiateFromStoryboard()
             vc.coordinator = self
             navigationController?.pushViewController(vc, animated: true)
@@ -40,14 +40,14 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func proceedToSecondVC() {
-        UserDefaults.standard.setValue(true, forKey:"is_logged_in")
+        UserDefaults.standard.setValue(true, forKey:"skipped")
         let vc = SecondViewController.instantiateFromStoryboard()
         vc.coordinator = self
         UIApplication.shared.windows.first?.rootViewController = vc
         //navigationController?.pushViewController(vc, animated: true)
     }
     
-    func proceedToThirdVC(with feedModel: String, coordinator: CoordinatorProtocol) {
+    func proceedToThirdVC(with feedModel: FeedModel, coordinator: CoordinatorProtocol) {
         let vc = ThirdViewController.instantiateFromStoryboard()
         vc.feedModel = feedModel
         vc.coordinator = coordinator
