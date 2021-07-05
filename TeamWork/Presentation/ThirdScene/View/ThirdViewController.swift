@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ThirdViewController: BaseViewController {
     
@@ -33,6 +34,7 @@ class ThirdViewController: BaseViewController {
         guard let feed = feedModel else {return}
         
         newsTitleLabel.text = feed.title
+        imageView.kf.setImage(with: URL(string: feed.imageUrl ?? ""))
         authorNameLabel.text = feed.author
         postDateLabel.text = feed.time
         postLabel.text = feed.description
