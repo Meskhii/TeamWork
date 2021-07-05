@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct InfoViewModel {
+struct InfoViewModel : Codable{
     
     private var infos: Info
     

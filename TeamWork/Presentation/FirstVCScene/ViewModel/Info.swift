@@ -18,3 +18,8 @@ enum CodingKeys: String, CodingKey {
   
 }
 }
+
+
+struct Infos: Codable {
+    var infos : [Info]
+}
