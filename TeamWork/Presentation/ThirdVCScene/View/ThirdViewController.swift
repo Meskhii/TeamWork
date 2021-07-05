@@ -10,8 +10,8 @@ import Kingfisher
 
 class ThirdViewController: BaseViewController {
     
-    private var feedModel: FeedModel?
-
+    var feedModel: FeedModel?
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!

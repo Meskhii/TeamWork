@@ -32,6 +32,7 @@
 		EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7BF2692D0B6006F75F8 /* Main.storyboard */; };
 		EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C22692D0B7006F75F8 /* Assets.xcassets */; };
 		EA0EB7C62692D0B7006F75F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C42692D0B7006F75F8 /* LaunchScreen.storyboard */; };
+		EA584F6E2693640D008CC34F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C72692D0B7006F75F8 /* Info.plist */; };
 		EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
 		EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
@@ -301,6 +302,7 @@
 				EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */,
 				EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */,
 				EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */,
+				EA584F6E2693640D008CC34F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
