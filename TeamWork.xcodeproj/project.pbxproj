@@ -32,6 +32,8 @@
 		EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7BF2692D0B6006F75F8 /* Main.storyboard */; };
 		EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C22692D0B7006F75F8 /* Assets.xcassets */; };
 		EA0EB7C62692D0B7006F75F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0EB7C42692D0B7006F75F8 /* LaunchScreen.storyboard */; };
+		EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
+		EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		EA0EB7C22692D0B7006F75F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0EB7C52692D0B7006F75F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0EB7C72692D0B7006F75F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
+		EAD42E3726936399006A25A6 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		079371A22692FB2400C67084 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EAD42E332693637C006A25A6 /* ThirdVCScene */,
 				EA0617FC269340890090E38C /* FirstVCScene */,
 				079371902692D76300C67084 /* Base */,
 			);
@@ -212,6 +217,23 @@
 			path = TeamWork;
 			sourceTree = "<group>";
 		};
+		EAD42E332693637C006A25A6 /* ThirdVCScene */ = {
+			isa = PBXGroup;
+			children = (
+				EAD42E3426936386006A25A6 /* View */,
+			);
+			path = ThirdVCScene;
+			sourceTree = "<group>";
+		};
+		EAD42E3426936386006A25A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAD42E3726936399006A25A6 /* ThirdViewController.swift */,
+				EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +298,7 @@
 				EA0617FF269340A20090E38C /* FirstViewController.storyboard in Resources */,
 				EA061804269340D00090E38C /* InfoCell.xib in Resources */,
 				EA0EB7C62692D0B7006F75F8 /* LaunchScreen.storyboard in Resources */,
+				EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */,
 				EA0EB7C32692D0B7006F75F8 /* Assets.xcassets in Resources */,
 				EA0EB7C12692D0B6006F75F8 /* Main.storyboard in Resources */,
 			);
@@ -298,6 +321,7 @@
 				EA0EB7BA2692D0B6006F75F8 /* AppDelegate.swift in Sources */,
 				EA061812269341150090E38C /* CollectionViewExtension.swift in Sources */,
 				EA06180B269340FC0090E38C /* InfoDataSource.swift in Sources */,
+				EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */,
 				0793718A2692D69800C67084 /* CoordinatorProtocol.swift in Sources */,
 				EA0EB7BC2692D0B6006F75F8 /* SceneDelegate.swift in Sources */,
 				079371922692D77400C67084 /* BaseViewController.swift in Sources */,
