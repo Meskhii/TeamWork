@@ -38,6 +38,9 @@
 		EA6B75A0269387DA002FCC7A /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B759F269387DA002FCC7A /* SecondCell.swift */; };
 		EA6B75A42693887F002FCC7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */; };
 		EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */; };
+		EAB3167D26938A3900D63D88 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3167C26938A3900D63D88 /* PostViewModel.swift */; };
+		EAB3167F26938A3E00D63D88 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3167E26938A3E00D63D88 /* ProfileViewModel.swift */; };
+		EAB3168126938A4300D63D88 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3168026938A4300D63D88 /* PostDataSource.swift */; };
 		EAD42E3626936394006A25A6 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */; };
 		EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD42E3726936399006A25A6 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,9 @@
 		EA6B759F269387DA002FCC7A /* SecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		EA6B75A32693887F002FCC7A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		EA6B75A52693888E002FCC7A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		EAB3167C26938A3900D63D88 /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		EAB3167E26938A3E00D63D88 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		EAB3168026938A4300D63D88 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		EAD42E3526936394006A25A6 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
 		EAD42E3726936399006A25A6 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +240,7 @@
 		EA6B759826938755002FCC7A /* SecondVCScene */ = {
 			isa = PBXGroup;
 			children = (
+				EAB3167B26938A3200D63D88 /* ViewModel */,
 				EA6B759E269387BA002FCC7A /* SecondCell */,
 				EA6B759926938760002FCC7A /* View */,
 			);
@@ -255,6 +262,16 @@
 				EA6B759F269387DA002FCC7A /* SecondCell.swift */,
 			);
 			path = SecondCell;
+			sourceTree = "<group>";
+		};
+		EAB3167B26938A3200D63D88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAB3168026938A4300D63D88 /* PostDataSource.swift */,
+				EAB3167E26938A3E00D63D88 /* ProfileViewModel.swift */,
+				EAB3167C26938A3900D63D88 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EAD42E332693637C006A25A6 /* ThirdVCScene */ = {
@@ -353,8 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB3167D26938A3900D63D88 /* PostViewModel.swift in Sources */,
 				EA6B759D269387B1002FCC7A /* SecondViewController.swift in Sources */,
 				EA6B75A62693888F002FCC7A /* UITableViewCell+Extension.swift in Sources */,
+				EAB3167F26938A3E00D63D88 /* ProfileViewModel.swift in Sources */,
 				079371942692D7E200C67084 /* NetworkManager.swift in Sources */,
 				EA061809269340F70090E38C /* Info.swift in Sources */,
 				0793718C2692D6C600C67084 /* AppCoordinator.swift in Sources */,
@@ -367,6 +386,7 @@
 				EA06180B269340FC0090E38C /* InfoDataSource.swift in Sources */,
 				EAD42E3826936399006A25A6 /* ThirdViewController.swift in Sources */,
 				EA6B75A0269387DA002FCC7A /* SecondCell.swift in Sources */,
+				EAB3168126938A4300D63D88 /* PostDataSource.swift in Sources */,
 				0793718A2692D69800C67084 /* CoordinatorProtocol.swift in Sources */,
 				EA0EB7BC2692D0B6006F75F8 /* SceneDelegate.swift in Sources */,
 				079371922692D77400C67084 /* BaseViewController.swift in Sources */,
